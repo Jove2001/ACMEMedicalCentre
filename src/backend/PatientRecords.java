@@ -10,7 +10,7 @@ public class PatientRecords
    private String gender;
    private int medicareNumber;
 
-   public PatientRecords(String name, byte age, int phoneNumber) throws Exception
+   PatientRecords(String name, byte age, int phoneNumber) throws Exception
    {
       checkString(name);
       this.name = name;
@@ -44,4 +44,17 @@ public class PatientRecords
       }
    }
 
+   public String printPatientDetails() {
+      String patientDetails = "";
+      patientDetails += ("Name: " + this.name + "\n");
+      patientDetails += ("Age: " + this.age + "\n");
+      patientDetails += ("Contact: " + this.phoneNumber + "\n");
+      patientDetails += ("Address: " + this.address + "\n");
+      patientDetails += ("Gender: " + this.gender + "\n");
+      patientDetails += ("Medicare#: " + this.medicareNumber + "\n");
+      patientDetails += ("---------------------------------");
+      
+      return patientDetails;
+      
+   }
 }
