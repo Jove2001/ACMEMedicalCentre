@@ -15,7 +15,12 @@ public class FileIO
    public String readFile() throws FileNotFoundException, IOException {
       String lines = "";
       BufferedReader reader = new BufferedReader(new FileReader(this.fileName));
-      return lines;
-      
+      String line = reader.readLine();
+      while (line != null) {
+         lines += line;
+         line = reader.readLine();  
+      }
+      reader.close();
+      return lines;   
    }
 }
