@@ -9,5 +9,4 @@ public class ACMEMedicalCentre
       // TODO Auto-generated method stub
 
    }
-
 }
