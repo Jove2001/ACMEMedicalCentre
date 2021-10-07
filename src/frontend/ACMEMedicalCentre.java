@@ -1,12 +1,18 @@
 package frontend;
+
 import backend.*;
 
 public class ACMEMedicalCentre
 {
 
+   public ACMEMedicalCentre()
+   {
+      FileIO FileIO = new FileIO();
+   }
+
    public static void main(String[] args)
    {
-      // TODO Auto-generated method stub
+      ACMEMedicalCentre obj = new ACMEMedicalCentre();
 
    }
 }
