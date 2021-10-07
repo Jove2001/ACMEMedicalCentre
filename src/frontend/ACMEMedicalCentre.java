@@ -9,7 +9,16 @@ public class ACMEMedicalCentre
    public ACMEMedicalCentre()
    {
       this.recordsManager = new RecordsManager();
-      
+
+      try
+      {
+         this.recordsManager.createNewPatient("John", (byte) 27, 0400000000);
+      }
+      catch (Exception e)
+      {
+         System.out.println(e);
+      }
+
       System.out.println(this.recordsManager.printAllPatientDetails());
    }
 

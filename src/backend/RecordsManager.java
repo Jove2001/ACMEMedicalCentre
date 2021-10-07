@@ -18,6 +18,8 @@ public class RecordsManager
    public void createNewPatient(String name, byte age, int phoneNumber)
             throws Exception
    {
+
+      // Will edit this to have an array expander check first.
       if (this.numberPatients < this.patientRecords.length)
       {
          this.patientRecords[numberPatients] =
@@ -25,12 +27,15 @@ public class RecordsManager
          this.numberPatients += 1;
       }
    }
-   
-   public String printAllPatientDetails() {
+
+   public String printAllPatientDetails()
+   {
       String patientDetails = "";
       int i = 0;
-      while (i < this.numberPatients) {
+      while (i < this.numberPatients)
+      {
          patientDetails += this.patientRecords[i].printPatientDetails();
+         i += 1;
       }
       return patientDetails;
    }

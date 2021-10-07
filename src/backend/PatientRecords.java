@@ -44,7 +44,8 @@ public class PatientRecords
       }
    }
 
-   public String printPatientDetails() {
+   public String printPatientDetails()
+   {
       String patientDetails = "";
       patientDetails += ("Name: " + this.name + "\n");
       patientDetails += ("Age: " + this.age + "\n");
@@ -53,8 +54,8 @@ public class PatientRecords
       patientDetails += ("Gender: " + this.gender + "\n");
       patientDetails += ("Medicare#: " + this.medicareNumber + "\n");
       patientDetails += ("---------------------------------");
-      
+
       return patientDetails;
-      
+
    }
 }
