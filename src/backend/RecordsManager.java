@@ -15,6 +15,11 @@ public class RecordsManager
 
    }
 
+   public int getNumberPatients()
+   {
+      return this.numberPatients;
+   }
+
    public void createNewPatient(String name, byte age, int phoneNumber)
             throws Exception
    {
@@ -28,13 +33,13 @@ public class RecordsManager
       }
    }
 
-   public String printAllPatientDetails()
+   public String[] printAllPatientDetails()
    {
-      String patientDetails = "";
+      String[] patientDetails = new String[6];
       int i = 0;
       while (i < this.numberPatients)
       {
-         patientDetails += this.patientRecords[i].printPatientDetails();
+         patientDetails[i] = patientRecords[i].getPatientDetails();
          i += 1;
       }
       return patientDetails;

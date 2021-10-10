@@ -4,21 +4,20 @@ public class PatientRecords
 {
 
    private String name;
+   private String gender;
    private byte age;
    private int phoneNumber;
    private String address;
-   private String gender;
    private int medicareNumber;
 
    PatientRecords(String name, byte age, int phoneNumber) throws Exception
    {
       checkString(name);
       this.name = name;
-
+      this.gender = null;
       this.age = age;
       this.phoneNumber = phoneNumber;
       this.address = null;
-      this.gender = null;
       this.medicareNumber = 0;
    }
 
@@ -44,16 +43,15 @@ public class PatientRecords
       }
    }
 
-   public String printPatientDetails()
+   public String getPatientDetails()
    {
       String patientDetails = "";
-      patientDetails += ("Name: " + this.name + "\n");
-      patientDetails += ("Age: " + this.age + "\n");
-      patientDetails += ("Contact: " + this.phoneNumber + "\n");
-      patientDetails += ("Address: " + this.address + "\n");
-      patientDetails += ("Gender: " + this.gender + "\n");
-      patientDetails += ("Medicare#: " + this.medicareNumber + "\n");
-      patientDetails += ("---------------------------------");
+      patientDetails += this.name + ",";
+      patientDetails += this.gender + ",";
+      patientDetails += this.age + ",";
+      patientDetails += this.phoneNumber + ",";
+      patientDetails += this.address + ",";
+      patientDetails += this.medicareNumber;
 
       return patientDetails;
 
