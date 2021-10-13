@@ -35,14 +35,14 @@ public class RecordsManager
 
    public String[] printAllPatientDetails()
    {
-      String[] patientDetails = new String[6];
+      String[] patientInfo = new String[6];
       int i = 0;
       while (i < this.numberPatients)
       {
-         patientDetails[i] = patientRecords[i].getPatientDetails();
+         patientInfo[i] = patientRecords[i].getPatientDetails();
          i += 1;
       }
-      return patientDetails;
+      return patientInfo;
    }
 
 }
