@@ -1,3 +1,5 @@
+// Move this function to PatientRecords.java
+
 package model;
 
 import java.io.*;

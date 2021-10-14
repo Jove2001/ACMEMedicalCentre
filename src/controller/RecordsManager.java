@@ -17,7 +17,7 @@ public class RecordsManager
 
    }
 
-   public void createNewPatient(String name, byte age, int phoneNumber)
+   public void createNewPatient(String name, byte age, int medicareNumber)
             throws Exception
    {
 
@@ -25,7 +25,7 @@ public class RecordsManager
       if (this.numberPatients < this.patientRecords.length)
       {
          this.patientRecords[numberPatients] =
-                  new PatientRecords(name, age, phoneNumber);
+                  new PatientRecords(name, age, medicareNumber);
          this.numberPatients += 1;
       }
    }
@@ -36,7 +36,7 @@ public class RecordsManager
       int i = 0;
       while (i < this.numberPatients)
       {
-         patientDetails += this.patientRecords[i].printPatientDetails();
+         patientDetails = this.patientRecords[i].printPatientDetails();
          i += 1;
       }
       return patientDetails;
