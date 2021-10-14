@@ -1,15 +1,16 @@
 package view;
 
-import controller.RecordsManager;
+// Remove these
+import controller.PatientRecordsApp;
 import model.*;
 
-public class ACMEMedicalCentre
+public class ConsoleUI
 {
-   RecordsManager recordsManager;
+   PatientRecordsApp recordsManager;
 
-   public ACMEMedicalCentre()
+   public ConsoleUI()
    {
-      this.recordsManager = new RecordsManager();
+      this.recordsManager = new PatientRecordsApp();
 
       try
       {
@@ -21,11 +22,5 @@ public class ACMEMedicalCentre
       }
 
       System.out.println(this.recordsManager.printAllPatientDetails());
-   }
-
-   public static void main(String[] args)
-   {
-      ACMEMedicalCentre obj = new ACMEMedicalCentre();
-
    }
 }

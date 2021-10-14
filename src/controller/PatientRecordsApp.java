@@ -1,20 +1,20 @@
 package controller;
 
-import model.PatientRecords;
+import model.*;
+import view.*;
 
-public class RecordsManager
+public class PatientRecordsApp
 {
    private int arrayStartingSize;
    private PatientRecords[] patientRecords;
    private int numberPatients;
 
-   public RecordsManager()
+   public PatientRecordsApp()
    {
 
       this.arrayStartingSize = 10;
       this.patientRecords = new PatientRecords[arrayStartingSize];
       this.numberPatients = 0;
-
    }
 
    public void createNewPatient(String name, byte age, int medicareNumber)
@@ -42,4 +42,9 @@ public class RecordsManager
       return patientDetails;
    }
 
+   public static void main(String[] args)
+   {
+      PatientRecordsApp obj = new PatientRecordsApp();
+
+   }
 }
