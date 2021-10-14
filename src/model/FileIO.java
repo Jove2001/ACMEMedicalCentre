@@ -1,4 +1,4 @@
-package backend;
+package model;
 
 import java.io.*;
 
@@ -12,6 +12,7 @@ public class FileIO
      
    }
    
+   // This needs to be rewritten - Inefficient algorithm
    public String readFile() throws FileNotFoundException, IOException {
       String lines = "";
       BufferedReader reader = new BufferedReader(new FileReader(this.fileName));

@@ -1,6 +1,7 @@
-package frontend;
+package view;
 
-import backend.*;
+import controller.RecordsManager;
+import model.*;
 
 public class ACMEMedicalCentre
 {

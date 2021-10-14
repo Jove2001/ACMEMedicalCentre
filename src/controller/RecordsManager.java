@@ -1,4 +1,6 @@
-package backend;
+package controller;
+
+import model.PatientRecords;
 
 public class RecordsManager
 {

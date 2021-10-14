@@ -1,8 +1,7 @@
-package backend;
+package model;
 
 public class PatientRecords
 {
-
    private String name;
    private byte age;
    private int phoneNumber;
@@ -10,11 +9,10 @@ public class PatientRecords
    private String gender;
    private int medicareNumber;
 
-   PatientRecords(String name, byte age, int phoneNumber) throws Exception
+   public PatientRecords(String name, byte age, int phoneNumber, String address, String gender, int medicareNumber) throws Exception
    {
       checkString(name);
       this.name = name;
-
       this.age = age;
       this.phoneNumber = phoneNumber;
       this.address = null;
@@ -31,6 +29,8 @@ public class PatientRecords
    {
       checkString(name);
       this.name = name;
+      
+      
    }
 
    // Private method created as a helper as code was being duplicated in the
@@ -42,20 +42,5 @@ public class PatientRecords
          throw new Exception("'" + stringToCheck + "' is not a valid input. " +
                              "\n Fields cannot be left blank.");
       }
-   }
-
-   public String printPatientDetails()
-   {
-      String patientDetails = "";
-      patientDetails += ("Name: " + this.name + "\n");
-      patientDetails += ("Age: " + this.age + "\n");
-      patientDetails += ("Contact: " + this.phoneNumber + "\n");
-      patientDetails += ("Address: " + this.address + "\n");
-      patientDetails += ("Gender: " + this.gender + "\n");
-      patientDetails += ("Medicare#: " + this.medicareNumber + "\n");
-      patientDetails += ("---------------------------------");
-
-      return patientDetails;
-
    }
 }
