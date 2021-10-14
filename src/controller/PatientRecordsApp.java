@@ -8,13 +8,15 @@ public class PatientRecordsApp
    private int arrayStartingSize;
    private PatientRecords[] patientRecords;
    private int numberPatients;
+   private ConsoleUI console;
+//   private PatientRecords records = new PatientRecords(null, (byte) 0, arrayStartingSize);
 
    public PatientRecordsApp()
    {
-
       this.arrayStartingSize = 10;
       this.patientRecords = new PatientRecords[arrayStartingSize];
       this.numberPatients = 0;
+      this.console = new ConsoleUI();
    }
 
    public void createNewPatient(String name, byte age, int medicareNumber)
