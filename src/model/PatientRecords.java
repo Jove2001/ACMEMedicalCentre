@@ -1,9 +1,10 @@
 package model;
 
+// This class holds the patient records data structure
 public class PatientRecords
 {
    private String name;
-   private byte age;   
+   private byte age;
    private int medicareNumber;
 
    public PatientRecords(String name, byte age, int medicareNumber) throws Exception
@@ -23,12 +24,9 @@ public class PatientRecords
    {
       checkString(name);
       this.name = name;
-      
-      
+
    }
 
-   // Private method created as a helper as code was being duplicated in the
-   // constructor and mutator. Can expand this for any string checks in the class.
    private void checkString(String stringToCheck) throws Exception
    {
       if (stringToCheck.isBlank() || stringToCheck == null)
@@ -40,8 +38,7 @@ public class PatientRecords
 
    public String printPatientDetails()
    {
-      return name;
-      // TODO Auto-generated method stub
-      
+      return null;
+
    }
 }

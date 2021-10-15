@@ -1,31 +1,33 @@
 package view;
 
-// Remove these
-import controller.PatientRecordsApp;
-import model.*;
+import java.util.Scanner;
 
+// Take user input and display text to console with this class
 public class ConsoleUI
 {
-   PatientRecordsApp recordsManager;
+   private Scanner userInput;
 
    public ConsoleUI()
    {
-      this.recordsManager = new PatientRecordsApp();
-
-      try
-      {
-         this.recordsManager.createNewPatient("John", (byte) 27, 0400000000);
-      }
-      catch (Exception e)
-      {
-         System.out.println(e);
-      }
-
-      System.out.println(this.recordsManager.printAllPatientDetails());
+      this.userInput = new Scanner(System.in);
    }
 
-   public ConsoleUI(PatientRecordsApp patientRecordsApp)
+   public void showMainMenu()
    {
-      // TODO Auto-generated constructor stub
+      String menu = "Welcome to ACME Medical Centre\n";
+      menu += "---------------------------------";
+      menu += "\n[A]dd new patient";
+      menu += "\n[P]rint all patient details";
+      menu += "\n\nE[x]it";
+      menu += "\n";
+      menu += "\nSelection: ";
+
+      System.out.print(menu);
+   }
+
+   public String getUserDataEntry()
+   {
+      String dataEntry = this.userInput.nextLine();
+      return dataEntry;
    }
 }
