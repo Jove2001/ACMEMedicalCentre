@@ -2,6 +2,13 @@ package controller;
 
 // I believe that we shouldn't be able to directly access PatientRecords from the the main class,
 // All access should be done through the records manager??
+
+// Model:
+// PatientRecordsApp = Controller and main class. Has one-to-many with ConsoleUI & PatientRecordsManager
+// ConsoleUI = View. Has one-to-one with PatientRecordsApp 
+// PatientRecordsManager = Model. Has one-to-many with  PatientRecordsApp  & PatientRecords
+// PatientRecords = model. Has one-to-one with  PatientRecordsManager
+
 import model.PatientRecordsManager;
 import view.*;
 
