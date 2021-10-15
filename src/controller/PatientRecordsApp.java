@@ -16,13 +16,12 @@ public class PatientRecordsApp
       this.arrayStartingSize = 10;
       this.patientRecords = new PatientRecords[arrayStartingSize];
       this.numberPatients = 0;
-      this.console = new ConsoleUI();
+      this.console = new ConsoleUI(this);
    }
 
    public void createNewPatient(String name, byte age, int medicareNumber)
             throws Exception
    {
-
       // Will edit this to have an array expander check first.
       if (this.numberPatients < this.patientRecords.length)
       {

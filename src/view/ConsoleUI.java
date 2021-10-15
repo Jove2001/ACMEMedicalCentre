@@ -23,4 +23,9 @@ public class ConsoleUI
 
       System.out.println(this.recordsManager.printAllPatientDetails());
    }
+
+   public ConsoleUI(PatientRecordsApp patientRecordsApp)
+   {
+      // TODO Auto-generated constructor stub
+   }
 }
