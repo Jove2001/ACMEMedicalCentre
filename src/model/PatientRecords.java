@@ -1,7 +1,8 @@
 package model;
 
 // This class holds the patient records data structure
-public class PatientRecords
+// Restrict access to class??
+class PatientRecords
 {
    private String name;
    private byte age;

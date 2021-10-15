@@ -6,7 +6,7 @@ import java.io.*;
 public class PatientRecordsManager
 {
    private String fileName;
-   private PatientRecords patientRecords;
+   private PatientRecords[] patientRecords;
 
    public PatientRecordsManager(String fileName)
    {
@@ -33,7 +33,7 @@ public class PatientRecordsManager
    // Load file
    public void loadFile() throws FileNotFoundException, IOException
    {
-      
+
    }
 
    // Parse data from file into a single patient record
